@@ -35,9 +35,9 @@ module.exports = {
             auto_return : "all",
             external_reference : id,
             back_urls : {
-              success : "http://64.227.5.31/payments/success",
-              pending : "http://64.227.5.31/payments/pending",
-              failure : "http://64.227.5.31/payments/failure",
+              success : "http://64.227.5.31:3000/payments/success/aluno01/1",
+              pending : "http://64.227.5.31:3000/payments/pending/aluno01/2",
+              failure : "http://64.227.5.31:3000/payments/failure/aluno01/3",
             }
           }
       
