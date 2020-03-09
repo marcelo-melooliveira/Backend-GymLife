@@ -15,6 +15,7 @@ class BuyController {
     console.log(messege);
     req.io.emit(id_user, messege);
 
+    return
   }
 
   failure(req, res){
@@ -25,6 +26,7 @@ class BuyController {
     console.log(messege);
     req.io.emit(id_user, messege);
 
+    return
   }
 
 }

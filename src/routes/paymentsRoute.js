@@ -2,14 +2,22 @@ const express = require('express');
 const routes = express.Router();
 
 const paymentsController = require('../controllers/paymentsController');
-const BuyController = require('../controllers/buyController');
 
 routes.get('/checkout/:id/:email/:description/:amount', paymentsController.checkout)
 
-routes.get('/success/:idUser/:messege', BuyController.sucess);
+routes.get('/success', (req, res) => {
+    console.log('Deu sucesso');
+    res.send("ok");
+})
 
-routes.get('/pending/:idUser/:messege', BuyController.pending);
+routes.get('/pending', (req, res) => {
+    console.log('Deu pendencia');
+    res.send("ok");
+})
 
-routes.get('/failure/:idUser/:messege', BuyController.failure);
+routes.get('/failure', (req, res) => {
+    console.log('Deu erro');
+    res.send("ok");
+})
 
 module.exports = routes;

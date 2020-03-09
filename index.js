@@ -26,15 +26,15 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json());
 
-// //For render views
-// app.engine("ejs", engines.ejs);
-// app.set('views', path.join(__dirname, './src/views'));
-// app.set("view engine", "ejs");
+//For render views
+app.engine("ejs", engines.ejs);
+app.set('views', path.join(__dirname, './src/views'));
+app.set("view engine", "ejs");
 
 //Payments route
 app.use('/payments',paymentsRoute);
 
 server.listen(process.env.API_PORT, function(err){
-    if(err) console.error(err);
+    if(err) console.error("entrou na opção erro");
     console.log(`API INICIADA NA PORTA ${process.env.API_PORT}`) 
 });
